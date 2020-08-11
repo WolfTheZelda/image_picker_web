@@ -13,7 +13,7 @@ import 'src/web_image_picker.dart';
 import 'src/Models/Types.dart';
 
 class ImagePickerWeb {
-  static void registerWith(Registrar registrar) {
+  static void registerWith(/*Registrar*/ registrar) {
     final channel = MethodChannel('image_picker_web', const StandardMethodCodec(), registrar.messenger);
     final instance = WebImagePicker();
     channel.setMethodCallHandler((call) async {

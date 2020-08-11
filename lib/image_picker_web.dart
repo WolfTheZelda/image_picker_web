@@ -7,13 +7,13 @@ import 'dart:convert';
 import 'package:universal_html/html.dart' as html;
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter_web_plugins/flutter_web_plugins.dart';
+//import 'package:flutter_web_plugins/flutter_web_plugins.dart';
 
 import 'src/web_image_picker.dart';
 import 'src/Models/Types.dart';
 
 class ImagePickerWeb {
-  static void registerWith(Registrar registrar) {
+  static void registerWith(/*Registrar*/ registrar) {
     final channel = MethodChannel('image_picker_web', const StandardMethodCodec(), registrar.messenger);
     final instance = WebImagePicker();
     channel.setMethodCallHandler((call) async {
